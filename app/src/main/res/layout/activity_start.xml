@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.digitalonboarding.StartActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/fondo_splash"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/btnNext" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/foto" />
+
+    <ImageButton
+        android:textColor="@color/cardview_light_background"
+        android:layout_height="0dp"
+        android:id="@+id/btnNext"
+        android:layout_weight="1"
+        android:src="@drawable/cast_ic_mini_controller_skip_next"
+        android:onClick="next"
+        android:background="@drawable/buttons_blue_drawable"
+        android:tint="#ccc"
+        android:layout_width="0dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnNext"
+        android:id="@+id/txtTittleOnboarding"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffff"
+        tools:text="@string/bienvenido_a_veribank"
+        android:gravity="center"
+
+        android:textSize="24sp" />
+    <ImageView
+        android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@+id/btnNext"
+      android:onClick="settings"
+      app:srcCompat="@drawable/ajustes" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/md_btn_selector_dark"
+        android:drawableRight="@drawable/proximo"
+        android:onClick="next"
+        android:text="NEXT"
+        android:textColor="@color/cardview_light_background" />
+
+
+</RelativeLayout>

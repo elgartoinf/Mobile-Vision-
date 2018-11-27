@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.digitalonboarding.SplashScreenActivity"
+    android:background="@android:color/darker_gray">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo_splash"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:padding="30dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_veritran"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_centerVertical="false"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffff"
+        android:textSize="14sp"
+        android:text=""
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/txtVersionName" />
+</RelativeLayout>

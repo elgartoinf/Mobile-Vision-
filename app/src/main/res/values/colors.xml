@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1d1d1d</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#278dc1</color>
+    <color name="red">#ff0000</color>
+    <color name="azul_principal">#115b9b</color>
+    <color name="red_button">#fd0001</color>
+    <color name="blue_progress">#8a2489d2</color>
+  <color name="black_buttom_camera">#36000000</color>
+    <color name="help_background">#ff434343</color>
+
+
+</resources>

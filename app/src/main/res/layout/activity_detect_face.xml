@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.digitalonboarding.DetectFaceActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="160dp"
+        android:layout_width="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/azul_principal"
+        android:id="@+id/linearLayout3" />
+
+    <ImageView
+        android:id="@+id/steper"
+        android:layout_width="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/step1"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgCapture"
+        android:src="@color/cardview_light_background"
+        android:layout_weight="1"
+        app:civ_border_width="7dp"
+        app:civ_border_color="#115b9b"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/steper"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        android:layout_marginBottom="8dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_bias="0.8"
+        android:layout_width="0dp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintVertical_bias="0.84000003"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1">
+
+        <android.support.constraint.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:text="@string/esta_de_acuerdo_con_su_foto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblId"
+                app:layout_constraintHorizontal_bias="0.47"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="20sp"
+                android:textColor="@color/azul_principal"
+                android:gravity="center" />
+
+            <Button
+                android:text="@string/repetir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRepeat"
+                android:onClick="tryPhoto"
+                android:textColor="@color/red_button"
+                android:tint="#ccc"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:background="@drawable/buttons_red"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/lblId"
+                app:layout_constraintLeft_toLeftOf="@+id/btnNext"
+                app:layout_constraintRight_toRightOf="@+id/btnNext" />
+
+            <Button
+                android:text="@string/continuar"
+                android:layout_width="0dp"
+                android:textColor="@color/cardview_light_background"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNext"
+                android:onClick="continuar"
+                android:tint="#ccc"
+                android:textAllCaps="false"
+                android:background="@drawable/buttons_blue_degree"
+                android:textSize="18sp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/btnRepeat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="32dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/cast_expanded_controller_background_color"
+  android:keepScreenOn="true"
+  android:orientation="horizontal">
+
+  <com.digitalonboarding.camera.CameraSourcePreview
+    android:id="@+id/preview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.digitalonboarding.camera.GraphicOverlay
+      android:id="@+id/faceOverlay"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+
+  </com.digitalonboarding.camera.CameraSourcePreview>
+
+
+  <include
+      layout="@layout/progress_multitracker_item"
+      android:layout_above="@+id/relativeLayout"
+      android:layout_alignParentStart="true"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content" />
+
+  <LinearLayout
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:gravity="end"
+    android:background="@color/black_buttom_camera"
+    android:orientation="horizontal">
+
+    <ImageView
+      android:id="@+id/info"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_margin="10dp"
+      app:srcCompat="@drawable/ic_info" />
+
+    <ToggleButton
+      android:id="@+id/switch_flash"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_margin="10dp"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/background_check"
+      android:focusable="false"
+      android:focusableInTouchMode="false"
+      android:gravity="top"
+      android:textOff=""
+      android:textOn="" />
+
+  </LinearLayout>
+
+  <ImageView
+      android:id="@+id/document_background"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/relativeLayout"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_weight="1"
+      android:orientation="horizontal"
+      android:padding="60dp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/document_landscape"
+      android:visibility="visible" />
+
+
+  <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/linearLayout5">
+    <ImageButton
+      android:id="@+id/btnTakePicture"
+      android:layout_width="80dp"
+      android:layout_height="60dp"
+      android:layout_weight="1"
+      android:layout_gravity="right"
+      android:onClick="takePiucture"
+      android:src="@drawable/ic_take_picture"
+      android:tint="@color/colorAccent"
+      android:visibility="gone" />
+
+
+  </RelativeLayout>
+
+  <TextView
+    android:id="@+id/chronometer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:textColor="#9cffffff"
+    android:textSize="100sp"
+    android:visibility="gone" />
+
+</RelativeLayout>

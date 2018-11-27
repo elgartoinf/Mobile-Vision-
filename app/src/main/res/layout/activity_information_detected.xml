@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.digitalonboarding.InformationDetectedActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/azul_principal"
+        android:id="@+id/linearLayout3" />
+
+    <ImageView
+        android:id="@+id/steper"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/step3"/>
+
+    <LinearLayout
+        android:layout_below="@id/steper"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1.7"
+            android:layout_marginTop="0dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgStep2"
+                android:src="#ffffff"
+                app:civ_border_width="7dp"
+                app:civ_border_color="#115b9b"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignStart="@+id/center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgStep1"
+                android:src="#ffffff"
+                app:civ_border_width="7dp"
+                app:civ_border_color="#115b9b"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_height="match_parent"
+            android:layout_margin="24dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="@string/nombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lblName"
+                            android:layout_marginTop="1dp"
+                            android:layout_alignParentTop="true"
+                            android:textColor="#b2b2b2"
+                            android:layout_marginLeft="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/txtName"
+                            tools:layout_editor_absoluteX="153dp"
+                            tools:layout_editor_absoluteY="223dp"
+                            android:hint="@string/nombre"
+                            android:layout_below="@+id/lblName"
+                            android:drawableRight="@drawable/nombre"
+                            android:textColor="@color/azul_principal"
+                            android:textSize="16sp"
+                            android:background="@color/cardview_light_background"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp"
+                            android:gravity="left|center_vertical"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:text="@string/apellidos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lblLastName"
+                            android:layout_marginTop="1dp"
+                            android:layout_below="@+id/txtName"
+                            android:textColor="#b2b2b2"
+                            android:layout_marginLeft="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/txtLastName"
+                            tools:layout_editor_absoluteX="153dp"
+                            tools:layout_editor_absoluteY="223dp"
+                            android:hint="@string/apellidos"
+                            android:layout_below="@+id/lblLastName"
+                            android:drawableRight="@drawable/nombre"
+                            android:textColor="@color/azul_principal"
+                            android:textSize="16sp"
+                            android:background="@color/cardview_light_background"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp"
+                            android:gravity="left|center_vertical"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:text="@string/cedula"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lblId"
+                            android:layout_below="@id/txtLastName"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#b2b2b2"
+                            android:layout_marginLeft="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:inputType="textPersonName"
+                            android:id="@+id/txtID"
+                            android:hint="@string/cedula"
+                            android:layout_below="@+id/lblId"
+                            android:drawableEnd="@drawable/identidad"
+                            android:textColor="@color/azul_principal"
+                            android:textSize="16sp"
+                            android:background="@color/cardview_light_background"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp"
+                            android:gravity="left|center_vertical"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:text="@string/nacimiento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lblBirthDate"
+                            android:layout_below="@+id/txtID"
+                            android:textColor="#b2b2b2"
+                            android:layout_marginLeft="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/txtBirthDate"
+                            tools:layout_editor_absoluteX="178dp"
+                            tools:layout_editor_absoluteY="316dp"
+                            android:hint="@string/nacimiento"
+                            android:drawableRight="@drawable/fecha"
+                            android:textColor="@color/azul_principal"
+                            android:layout_below="@+id/lblBirthDate"
+                            android:layout_alignParentStart="true"
+                            android:textSize="16sp"
+                            android:background="@color/cardview_light_background"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp"
+                            android:gravity="left|center_vertical"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:text="@string/tipo_sangre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lblBLoodType"
+                            android:layout_below="@+id/txtBirthDate"
+                            android:textColor="#b2b2b2"
+                            android:layout_marginLeft="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/txtBloodType"
+                            tools:layout_editor_absoluteY="342dp"
+                            tools:layout_editor_absoluteX="153dp"
+                            android:hint="@string/tipo_sangre"
+                            android:drawableRight="@drawable/sangre"
+                            android:textColor="@color/azul_principal"
+                            android:layout_below="@+id/lblBLoodType"
+                            android:layout_alignParentStart="true"
+                            android:textSize="16sp"
+                            android:background="@color/cardview_light_background"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp"
+                            android:gravity="left|center_vertical"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:text="@string/sexo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lblSex"
+                            android:layout_below="@+id/txtBloodType"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#b2b2b2"
+                            android:layout_marginLeft="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/txtSex"
+                            tools:layout_editor_absoluteY="412dp"
+                            tools:layout_editor_absoluteX="153dp"
+                            android:hint="@string/sexo"
+                            android:layout_below="@+id/lblSex"
+                            android:drawableRight="@drawable/sexo"
+                            android:textColor="@color/azul_principal"
+                            android:textSize="16sp"
+                            android:background="@color/cardview_light_background"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="30dp"
+                            android:gravity="left|center_vertical"
+                            android:enabled="false" />
+
+
+                    </RelativeLayout>
+                </ScrollView>
+                <Button
+                    android:layout_width="match_parent"
+                    android:text="@string/next_info"
+                    android:layout_margin="24dp"
+                    android:onClick="showValidationActivity"
+                    android:background="@drawable/buttons_blue_degree"
+                    android:textColor="@color/cardview_light_background"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

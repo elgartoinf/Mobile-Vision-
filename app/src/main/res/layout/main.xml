@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:keepScreenOn="true">
+
+  <com.digitalonboarding.camera.CameraSourcePreview
+    android:id="@+id/preview"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_above="@+id/btnTakePicture"
+    android:background="@color/cast_expanded_controller_background_color"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/btnTakePicture">
+
+    <com.digitalonboarding.camera.GraphicOverlay
+      android:id="@+id/faceOverlay"
+      android:layout_width="match_parent"
+
+      android:layout_height="match_parent" />
+
+  </com.digitalonboarding.camera.CameraSourcePreview>
+
+  <ImageView
+    android:id="@+id/document_background"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_above="@+id/linearLayout7"
+    android:orientation="horizontal"
+    android:src="@drawable/document_portrait"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/preview" />
+
+
+  <ImageButton
+    android:id="@+id/btnTakePicture"
+    android:layout_width="0dp"
+    android:layout_height="90dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="center"
+
+    android:padding="20dp"
+    android:background="@drawable/camera_buttom"
+    android:onClick="takePiucture"
+    android:scaleType="fitCenter"
+    android:src="@drawable/ic_take_picture"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent" />
+
+
+  <TextView
+    android:id="@+id/txtTitulo"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#75232222"
+    android:gravity="center"
+    android:text="@string/enfoque_la_c_mara_en_un_rostro"
+    android:textColor="#fff"
+    android:textSize="19sp"
+    android:visibility="gone"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="0dp" />
+  <LinearLayout
+    android:id="@+id/linearLayout7"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_above="@+id/btnTakePicture"
+    android:layout_toEndOf="@+id/document_background"
+    android:background="@color/black_buttom_camera"
+    android:gravity="right"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toTopOf="@+id/btnTakePicture"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+    <ImageView
+      android:id="@+id/info"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_margin="10dp"
+      app:srcCompat="@drawable/ic_info" />
+    <ToggleButton
+      android:id="@+id/switch_flash"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_margin="10dp"
+      android:background="@drawable/background_check"
+      android:drawableTint="@color/cardview_light_background"
+      android:focusable="false"
+      android:focusableInTouchMode="false"
+      android:textOff=""
+      android:textOn="" />
+
+  </LinearLayout>
+</android.support.constraint.ConstraintLayout>

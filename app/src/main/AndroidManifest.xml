@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.digitalonboarding">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="face" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name=".service.IncomingSms">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="face" />
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplahScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4765f8f19b724c3bc12c2e236b1abdea42905599" />
+
+        <activity
+            android:name=".Step1Activty"
+            android:icon="@drawable/logo_blanco_solo"
+            android:largeHeap="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DetectFaceActivity"
+            android:largeHeap="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Step2Activity"
+            android:largeHeap="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompareFacesActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".Step3Activity"
+            android:largeHeap="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FaceTrackerActivity"
+            android:configChanges="orientation"
+            android:theme="@style/AppTheme.NoActionBar2" />
+        <activity
+            android:name=".BarcodeTrackerActivty"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar2" />
+        <activity
+            android:name=".InformationDetectedActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".OnboardingActivity" />
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplahScreen">
+            <intent-filter>
+            <!--      android:priority="200"
+                 android:autoVerify="true">
+                 <action android:name="android.intent.action.VIEW" />
+
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+
+                 &lt;!&ndash; This catches /io/schedule//// but not /io/schedule
+                      Note: Query parameters are not part of the path and when ?sid=UUID is appended
+                            to this path it indicates a session on the website and there is therefore
+                            code in MySchedule.onCreate that invokes SessionDetailActivity if the sid
+                            is present.
+                      See above for testing notes. &ndash;&gt;
+                 <data
+                     android:host="@string/website_host_name"
+                     android:pathPattern="/onboarding/*"
+                     android:scheme="http" />
+                 <data
+                     android:host="@string/website_host_name"
+                     android:pathPattern="/onboarding"
+                     android:scheme="https" />
+
+                 &lt;!&ndash; This catches /io/schedule but not /io/schedule//////
+                      See above for testing notes. &ndash;&gt;
+                 <data
+                     android:host="@string/website_host_name"
+                     android:pathPattern="/veritran/*"
+                     android:scheme="http" />
+                 <data
+                     android:host="@string/website_host_name"
+                     android:pathPattern="/veritran"
+                     android:scheme="https" />-->
+
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <data android:scheme="ob" />
+
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MultiTrackerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar2" />
+        <activity
+            android:name=".InformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProgressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".VeribankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".id.HelpActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".microblink.PDF417FaceDetectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".microblink.PDF417DetectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".microblink.FaceDetectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".id.templating.MyScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".OACIChileDetectorActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

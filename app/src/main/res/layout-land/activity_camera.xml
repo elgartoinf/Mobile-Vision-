@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/buttom_camera_focused"
+  tools:context="com.digitalonboarding.BarcodeTrackerActivty">
+
+    <SurfaceView
+      android:id="@+id/camera_view"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:layout_constraintBottom_creator="1"
+      tools:layout_constraintLeft_creator="1"
+      tools:layout_constraintRight_creator="1"
+      tools:layout_constraintTop_creator="1"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp" />
+
+    <com.digitalonboarding.Detector
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/max_quality_ocr_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView"
+        app:layout_constraintRight_toRightOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/camera_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camera_view"
+        app:layout_constraintVertical_bias="0.507"
+        app:srcCompat="@drawable/marco" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView"
+        app:layout_constraintRight_toRightOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/camera_view" />
+
+
+</android.support.constraint.ConstraintLayout>

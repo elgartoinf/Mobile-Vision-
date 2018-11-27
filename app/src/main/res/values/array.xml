@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="paises">
+        <item>Argentina</item>
+        <item>Colombia</item>
+        <item>Chile</item>
+    </string-array>
+    <string-array name="item_libraries">
+      <item>Mobile Vision</item>
+      <item>Micro<b>blink</b></item>
+    </string-array>
+
+</resources>

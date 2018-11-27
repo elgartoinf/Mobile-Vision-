@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.digitalonboarding.Step2Activity"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/azul_principal"
+        android:layout_height="150dp" />
+
+    <ImageView
+        android:id="@+id/steper"
+        android:layout_marginTop="5dp"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/step2"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardView5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/foto2"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp" />
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/cardView5">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:text="@string/tomar_foto_frontal_a_su_documento_de_identidad"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:id="@+id/lblId"
+                android:textColor="@color/azul_principal"
+                android:textSize="20sp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.11"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:text="@string/camara"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCamera"
+                android:onClick="startCaptureSecondFace"
+                android:background="@drawable/buttons_blue_degree"
+                android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/lblId"
+                android:layout_marginStart="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>
